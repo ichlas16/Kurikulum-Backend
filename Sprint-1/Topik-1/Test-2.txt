@@ -1,0 +1,23 @@
+Program Membuat_Mie_Instant
+
+Deklarasi :
+
+Algoritma :
+PERINTAH buat_mie_instant!(){
+LAKUKAN "beli","^mie" (warung)
+LAKUKAN "kembali" (rumah)
+LAKUKAN "pergi" (dapur)
+LAKUKAN "rebus","^air1"
+LAKUKAN "tuang","^bumbu" (mangkok)
+
+JIKA [KONDISI ^air1 = mendidih."^air2"]{
+	LAKUKAN "tiriskan","^air2"
+	/potong
+LAINNYA [KONDISI ^air1 = belum mendidih
+	LAKUKAN "tunggu = ^air2"
+	/potong
+
+LAKUKAN "tuang","^mie1" (mangkok)
+LAKUKAN "aduk","^mie1" = bumbu_rata."^mie2"
+LAKUKAN "makan","^mie2"
+//selesai
