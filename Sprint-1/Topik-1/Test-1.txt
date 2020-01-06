@@ -1,0 +1,29 @@
+Program Pengoperasian_Microsoft_Word
+
+deklrasi :
+tidak ada nilai angka
+
+algoritma :
+LAKUKAN (masuk) => 'start menu windows'
+LAKUKAN (klik kiri) => 'Microsoft Word'
+variabel.ketik (LAKUKAN -tulis 'harganya mahal.')
+.ketik()
+
+KETIKA .ketik (){
+	kondisi 1 : "tidak punya keyboard untuk mengetik"
+		LAKUKAN (klik kiri) => 'Start menu windows'
+		LAKUKAN (klik kiri) => 'accessories'
+		LAKUKAN (klik kiri) => 'on screen keyboard'
+		LAKUKAN 'on screen keyboard' => (gunakan untuk mengetik)
+	/selesai
+
+	kondisi 2 : ".ketik() selesai dilakukan"
+		LAKUKAN (klik kiri) => 'menu Microsoft Word'
+		LAKUKAN (klik kiri) => 'save as'
+		LAKUKAN (ketik nama file) => 'protes.xdoc'
+		LAKUKAN (klik kiri) => 'save'
+	/selesai
+}
+
+LAKUKAN (pencarian) => (Ichlas)
+LAKUKAN (lapor selesai) => 'protes.xdoc'
