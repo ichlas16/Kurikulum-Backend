@@ -1,0 +1,4 @@
+Jawab
+
+- Karena file tersebut merupakan "lokasi default terinstallnya paket PHP berada" yang letaknya sudah ditentukan saat kita menginstall PHP melalui terminal bash linux.
+- Sedangkan alasan mengapa bentuk file tersebut sekedar PHP saja, karena file tersebut memilki bentuk "aplikasi tautan untuk berbagi library".
