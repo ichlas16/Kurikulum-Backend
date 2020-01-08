@@ -1,0 +1,31 @@
+1. Soal + Jawab :
+var_dump($d + $e);
+= (int) 5, karena perintah penjumlahan menimpa bentuk string '2' menjadi int supaya bisa melakukan kalkulasi menghasilkan bilangan 5 integer.
+
+var_dump($e == $f);
+= bool(true), karena int $e dengan $f memiliki nilai yang sama sehingga bernilai "true" dan termasuk kedalam jenis variabel Boolean.
+
+var_dump($e === $f);
+= bool(false), karena int $e memiliki bentuk variabel string sedangkan $f memiliki bentuk variabel integer. perintah '===' menuntut kesamaan identitas beserta jenis variabelnya.
+
+var_dump($g);
+= NULL, karena variabel $g memiliki nilai null
+
+var_dump((bool)$g);
+= bool(false), karena dalam variabel Boolean false memiliki nilai 0
+
+var_dump((int)$g);
+= int(0), karena dalam integer null bernilai 0
+
+2. Soal + Jawab :
+var_dump(true && false);
+=bool(false), '&&' mengharuskan kedua kondisi dalam keadaan true untuk menghasilkan jawaban hasil yang "true", sehingga dengan demikian kondisi diatas tidak memenuhi syarat keluarnya jawaban "true".
+
+var_dump(true || false);
+=bool(true), '||' tidak mengharuskan kedua kondisi dalam keadaan true untuk mengahsilkan jawaban yang "true". jika salah satunya sudah dominan, maka nilai true akan menjadi jawaban dominan.
+
+var_dump(false || false);
+=bool(false), tidak didapati kondisi dimana salah satunya bernilai "true".
+
+var_dump(!false);
+=bool(true), karena "!" memiliki arti 'tidak sama dengan', sedangkan 'tidak sama dengan' true adalah false.
