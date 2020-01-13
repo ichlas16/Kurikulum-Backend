@@ -1,9 +1,11 @@
 <?php
-for ($n=9-1; $n >= 1 ; $n--) {
-    if ( $n >= 0 && $n % 2 == 0){
+for ($n=9 ; $n != 0 ; $n--) {
+    if (!($n % 2)){
+        continue;
+    }if ($n == 9){
         continue;
     }else{
-        echo $n . " ";
+        echo $n." ";
     }
 }
 ?>
