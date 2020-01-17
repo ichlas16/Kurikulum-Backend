@@ -4,8 +4,8 @@ function luas3(int $base, int $height) {
 }
 echo "Rumus Luas Segitiga = ".luas3(10, "5 meter")."meter";
 echo "<br/>";
-function keliling3(int $panjang, int $tinggi){
-    return sqrt($panjang**2 + $tinggi**2);
+function keliling3(int $base, int $height){
+    return sqrt($base**2 + $height**2);
 }
 echo "Rumus Keliling Lingkaran = ".keliling3(10, 5)."meter";
 
