@@ -1,31 +1,31 @@
 <?php
-function luas3(int $base, int $height) {
-    return $base * $height / 2;
+function counttriangle(int $base, int $height) {
+    $luas = $base * $height / 2;
+    echo "Rumus Luas Segitiga = ".$luas."meter<br/>";
+    $keliling = sqrt($base**2 + $height**2);
+    echo "Rumus keliling segitiga = ".$keliling."meter";
 }
-echo "Rumus Luas Segitiga = ".luas3(10, "5 meter")."meter";
-echo "<br/>";
-function keliling3(int $base, int $height){
-    return sqrt($base**2 + $height**2);
-}
-echo "Rumus Keliling Lingkaran = ".keliling3(10, 5)."meter";
+echo counttriangle(10, 5);
 
 echo "<br/>";
 echo "<br/>";
 
-function luasper(int $width, int $length){
-    return $width * $length;
+function countretangle(int $width, int $length){
+    $luas = $width * $length;
+    echo "Rumus Luas Persegi = ".$luas."meter<br/>";
+    $keliling = 2*($width + $length);
+    echo "Rumus Luas Persegi - ".$keliling."meter";
 }
-echo "Rumus Keliling Persegi = ".luasper(11, 7)."meter";
-echo "<br/>";
-function kelilingper(int $width, int $length){
-    return 2*($width + $length);
-}
-echo "Rumus Luas Persegi = ".kelilingper(11, 7)."meter";
-// function familyName($fname, $year) {
-//     echo "$fname Refsnes. Born in $year <br>";
-// }
+echo countretangle(10, 6);
 
-// familyName("Hege", "1975");
-// familyName("Stale", "1978");
-// familyName("Kai Jim", "1983");
+echo "<br/>";
+echo "<br/>";
+
+function countcircle(int $radius, int $diameter){
+    $luas = 3.14*($diameter/2);
+    echo "Rumus Luas Lingkaran = ".$luas."meter<br/>";
+    $keliling = 2*3.14*$radius;
+    echo "Rumus Keliling Lingkaran = ".$keliling."meter<br/>";
+}
+echo countcircle(4, 8);
 ?>

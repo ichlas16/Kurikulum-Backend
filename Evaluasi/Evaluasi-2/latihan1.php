@@ -7,10 +7,15 @@ $students = [
     'IT-004' => 'Dayat',
     'IT-017' => 'Lutfi',
 ];
+ksort($students);
+echo "Mengurutkan No. Induk dari yang terkecil = <br/>";
 foreach ($students as $key => $value){
-    array_sum($key);    
-    $sum = array_sum($value);
-    echo $sum."<br>";
+    echo $key."<br>";
+}
+arsort($students);
+echo "Mengurutkan nama dari huruf terbesar = <br>";
+foreach ($students as $key => $value){
+    echo $value."<br/>";
 }
 
 // rsort($students);
