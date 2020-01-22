@@ -46,10 +46,10 @@ class kellu
 }
 function mulai(){
 echo "__________________________________________________________\n";
-echo "Tekan 'k' untuk menghitung luas dan keliling 'persegi'!  |\n";
-echo "Tekan 'l' untuk menghitung luas dan keliling 'lingkaran'!|\n";
-echo "Tekan 't' untuk menghitung luas dan keliling 'trapesium'!|\n";
-echo "Tekan 'Ctrl+C' untuk keluar dari aplikasi                |\n";
+echo "|Tekan 'k' untuk menghitung luas dan keliling 'persegi'!  |\n";
+echo "|Tekan 'l' untuk menghitung luas dan keliling 'lingkaran'!|\n";
+echo "|Tekan 't' untuk menghitung luas dan keliling 'trapesium'!|\n";
+echo "|Tekan 'Ctrl+C' untuk keluar dari aplikasi                |\n";
 echo "__________________________________________________________\n";
 $bangundatar = trim(fgets(STDIN));
 if($bangundatar == "k"){
