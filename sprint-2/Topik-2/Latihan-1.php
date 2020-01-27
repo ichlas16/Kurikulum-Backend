@@ -58,9 +58,6 @@ if($bangundatar == "k"){
     kellu::lingkaran();
 }if($bangundatar == "t"){
     kellu::trapesium();
-}if($bangundatar !== "k" || $bangundatar !== "l" || $bangundatar !== "t"){
-    echo "\n-Masukkan input 'k' atau 'l' atau 't' tanpa kapital!-\n\n";
-    exit;
 }
 mulai();
 }
