@@ -17,10 +17,13 @@ class connect{
         }
 
     function inputdata(){
-        echo "Masukkan nama siswa!\n";
+        echo "=========================\n";
+        echo "Masukkan nama siswa! : ";
         $namas = trim(fgets(STDIN));
+        echo "=========================\n";
         echo "Masukkan nilai siswa!\n";
         $nilai = (int)fgets(STDIN);
+        echo "=========================\n";
         $query = "INSERT INTO siswa (nama, nilai) VALUES ('$namas', '$nilai');";
         $eks = $this->connect->prepare($query);
         $eks->execute();
@@ -28,6 +31,7 @@ class connect{
         }
 
     function count(){
+        echo "=========================\n";
         $perintah = "SELECT COUNT(siswaID) FROM siswa";
         $count = $this->connect->prepare($perintah);
         $count->execute();
@@ -36,6 +40,7 @@ class connect{
     }
 
     function average(){
+        echo "=========================\n";
         $perintah = "SELECT AVG(nilai) FROM siswa";
         $count = $this->connect->prepare($perintah);
         $count->execute();
@@ -44,6 +49,7 @@ class connect{
     }
 
     function potensi(){
+        echo "=========================\n";
         $perintah = "SELECT nama FROM siswa WHERE siswa.nilai>=80";
         $count = $this->connect->prepare($perintah);
         $count->execute();
@@ -52,6 +58,7 @@ class connect{
     }
 
     function remidi(){
+        echo "=========================\n";
         $perintah = "SELECT nama FROM siswa WHERE siswa.nilai<=65";
         $count = $this->connect->prepare($perintah);
         $count->execute();
@@ -60,31 +67,40 @@ class connect{
     }
 }
 
+function bakso(){
 $conn = new connect();
-
-echo "'1' = untuk input data\n";
-echo "'2' = untuk menghitung seluruh data\n";
-echo "'3' = untuk menghitung nilai rata-rata santri\n";
-echo "'4' = untuk mencari santri berpotensi\n";
-echo "'5' = untuk melihat santri dengan nilai <= 65\n\n";
+echo "\n";
+echo "+-----------------------------------------------+\n";
+echo "|'1' = untuk input data                         |\n";
+echo "|'2' = untuk menghitung seluruh data            |\n";
+echo "|'3' = untuk menghitung nilai rata-rata santri  |\n";
+echo "|'4' = untuk mencari santri berpotensi          |\n";
+echo "|'5' = untuk melihat santri dengan nilai <= 65  |\n";
+echo "|'Ctrl + C' = untuk keluar dari aplikasi!       |\n";
+echo "+-----------------------------------------------+\n\n";
+echo "Silahkan masukkan pilihan : ";
 $input = (int)fgets(STDIN);
 
-if ($input == "1"){
-    $conn->inputdata();
-}if ($input == "2"){
-    $conn->count();
-}if ($input == "3"){
-    $conn->average();
-}if ($input == "4"){
-    $conn->potensi();
-}if ($input == "5"){
-    $conn->remidi();
-}
-// $koneksi = new ConnectPdo();
-// echo "Masukkan data : ";
-// $input = trim(fgets(STDIN));
+    if ($input == "1"){
+        $conn->inputdata();
+    }if ($input == "2"){
+        $conn->count();
+    }if ($input == "3"){
+        $conn->average();
+    }if ($input == "4"){
+        $conn->potensi();
+    }if ($input == "5"){
+        $conn->remidi();
+    }
 
-// if ($input == "1") {
-//     $koneksi->getDATA();
-// }
+    echo "===========================================\n";
+    echo "\nIngin menggunakan aplikasi lagi?\n(y/n) ";
+    $pilihan = trim(fgets(STDIN));
+    if($pilihan == "y"){
+        bakso();
+    }if($pilihan == "n"){
+        die;
+    }
+}
+bakso();
 ?>
