@@ -1,0 +1,19 @@
+Penjelasan Mengenai Tabel-Tabel 1NF, 2NF dan 3NF
+
+NF merupakan singkatan dari Normal Form (bentuk normal).
+dengan menerapkan metode Normalization, yaitu sebuah teknik mendesain database dalam mengorganisir
+table-table sehingga bisa mengurangi penggunaan data dalam database menjadi lebih efisien.
+
+Caranya yaitu dengan menghubungkan tabel - table yang ada dalam suatu tautan menggunakan Relationship/Foreign Key.
+
+Aturan Utama 1NF (First Normal Form) :
+- Setiap sel tabel harus mengandung satu value,
+- Setiap perubahan yang terjadi haruslah berbeda (Unique).
+
+Aturan Utama 2NF (Second Normal Form) :
+- Berada di dalam 1NF,
+- Terdapat satu column sebagai Primary Key.
+
+Aturan Utama 3NF (Third Normal Form) :
+- Berada di dalam 2NF,
+- Tidak memiliki ketergantungan fungsional transitif.
