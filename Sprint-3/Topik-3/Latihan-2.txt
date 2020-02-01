@@ -4,7 +4,7 @@ NF merupakan singkatan dari Normal Form (bentuk normal).
 dengan menerapkan metode Normalization, yaitu sebuah teknik mendesain database dalam mengorganisir
 table-table sehingga bisa mengurangi penggunaan data dalam database menjadi lebih efisien.
 
-Caranya yaitu dengan menghubungkan tabel - table yang ada dalam suatu tautan menggunakan Relationship/Foreign Key.
+Caranya yaitu dengan menghubungkan tabel - table yang ada dalam suatu tautan menggunakan Relationship/Foreign Key sehingga value dalam column yang terkait tidak perlu diisi 2 kali dan mencocokkan untuk yang kedua kalinya.
 
 Aturan Utama 1NF (First Normal Form) :
 - Setiap sel tabel harus mengandung satu value,
