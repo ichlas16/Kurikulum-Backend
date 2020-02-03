@@ -21,7 +21,7 @@ class connect{
         echo "Masukkan nama siswa! : ";
         $namas = trim(fgets(STDIN));
         echo "=========================\n";
-        echo "Masukkan nilai siswa!\n";
+        echo "Masukkan nilai siswa! : ";
         $nilai = (int)fgets(STDIN);
         echo "=========================\n";
         $query = "INSERT INTO siswa (nama, nilai) VALUES ('$namas', '$nilai');";
@@ -70,14 +70,14 @@ class connect{
 function bakso(){
 $conn = new connect();
 echo "\n";
-echo "+-----------------------------------------------+\n";
+echo "+------[]Aplikasi Pengola Data Sederhana[]------+\n";
 echo "|'1' = untuk input data                         |\n";
 echo "|'2' = untuk menghitung seluruh data            |\n";
 echo "|'3' = untuk menghitung nilai rata-rata santri  |\n";
 echo "|'4' = untuk mencari santri berpotensi          |\n";
 echo "|'5' = untuk melihat santri dengan nilai <= 65  |\n";
 echo "|'Ctrl + C' = untuk keluar dari aplikasi!       |\n";
-echo "+-----------------------------------------------+\n\n";
+echo "+###############################################+\n\n";
 echo "Silahkan masukkan pilihan : ";
 $input = (int)fgets(STDIN);
 
@@ -99,6 +99,10 @@ $input = (int)fgets(STDIN);
     if($pilihan == "y"){
         bakso();
     }if($pilihan == "n"){
+    echo "\n   ━┏┛┏━┛┏━┃┛┏┏ ┏━┃  ┃ ┃┏━┃┏━┛┛┃ ┃
+    ┃ ┏━┛┏┏┛┃┃┃┃┏━┃  ┏┛ ┏━┃━━┃┃┏━┃
+    ┛ ━━┛┛ ┛┛┛┛┛┛ ┛  ┛ ┛┛ ┛━━┛┛┛ ┛
+    \n"; 
         die;
     }
 }
