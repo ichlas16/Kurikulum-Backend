@@ -10,6 +10,7 @@
     <h3>APLIKASI CRUD BARANG</h3>
     <form method="POST" action="">
     <label>Mau ngapain Hari inih?</label>
+    <br/>
     <input type="submit" name="create" value="Input Data">
     <input type="submit" name="read" value="Lihat Data">
     <input type="submit" name="update" value="Ubah Data">
@@ -19,12 +20,12 @@
 </html>
 <?php
 if(isset($_POST['create'])){
-    header('location:create.php');
+    header('location: create.php');
 }if(isset($_POST['read'])){
-    header('location:read.php');
+    header('location: read.php');
 }if(isset($_POST['update'])){
-    header('location:update.php');
-}if(isset($_POST['create'])){
-    header('location:delete.php');
+    header('location: update.php');
+}if(isset($_POST['delete'])){
+    header('location: delete.php');
 }
 ?>
