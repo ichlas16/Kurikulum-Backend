@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE['nama'])){
+    header('location: Kalkulator.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

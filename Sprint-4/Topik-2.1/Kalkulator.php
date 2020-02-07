@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])){
-	header('location: Kalkulator.php');
+    header('location: Kalkulator.php');
 }
 ?>
 
