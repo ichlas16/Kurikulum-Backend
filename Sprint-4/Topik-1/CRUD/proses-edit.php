@@ -10,12 +10,12 @@ if(isset($_POST['simpan'])){
     $penerima = $_POST['penerima'];
     $alpenerima = $_POST['alpenerima'];
 
-    $query = "UPDATE databar SET pengirim='$pengirim' alpengirim='$alpengirim' penerima='$penerima' alpenerima='$alpenerima' WHERE id='$id'";
+    $query = "UPDATE databar SET pengirim='$pengirim', alpengirim='$alpengirim', penerima='$penerima', alpenerima='$alpenerima' WHERE id=$id";
     $pedit = $db->prepare($query);
     $pedit->execute();
 
     if($pedit) {
-            header('location: list-siswa.php');
+            header('location: list-barang.php');
     }else{
         die("gagal menyimpan perubahan...");
     }

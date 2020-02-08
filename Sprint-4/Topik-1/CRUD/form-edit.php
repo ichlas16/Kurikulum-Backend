@@ -13,9 +13,8 @@ $edit = $db->prepare($query);
 $edit->execute();
 $hasil = $edit->fetch(pdo::FETCH_ASSOC);
 
-$res = $db->query('SELECT COUNT * FROM databar');
+$res = $db->query("SELECT COUNT(id) FROM databar");
 $num_rows = $res->fetchcolumn();
-
 if($num_rows < 1){
     die("data tidak ditemukan...");
 }
@@ -37,25 +36,25 @@ if($num_rows < 1){
 
     <form action="proses-edit.php" method="POST">
         <fieldset>
-            <input type="hidden" name="id" value="<?php echo $edit['id'] ?>" />
+            <input type="hidden" name="id" value="<?php echo $hasil['id'] ?>" >
         <p>
             <label for="pengirim">Pengirim: </label>
-            <input type="text" name="pengirim" placeholder="Masukkan nama pengirim" value="<?php echo $edit['pengirim'] ?>" />
+            <input type="text" name="pengirim" placeholder="Masukkan nama pengirim" value="<?php echo $hasil['pengirim'] ?>" >
         </p>
         <p>
             <label for="alpengirim">Alamat: </label>
-            <textarea name="alpengirim"><?php echo $edit['alpengirim'] ?></textarea>
+            <textarea name="alpengirim"><?php echo $hasil['alpengirim'] ?></textarea>
         </p>
         <p>
             <label for="penerima">Penerima: </label>
-            <input type="text" name="penerima" placeholder="Masukkan nama penerima" value="<?php echo $edit['penerima'] ?>" />
+            <input type="text" name="penerima" placeholder="Masukkan nama penerima" value="<?php echo $hasil['penerima'] ?>" >
         </p>
         <p>
             <label for="alpenerima">Alamat: </label>
-            <textarea name="alpenerima"><?php echo $edit['alpenerima'] ?></textarea>
+            <textarea name="alpenerima"><?php echo $hasil['alpenerima'] ?></textarea>
         </p>
         <p>
-            <input type="submit" value="Simpan" name="simpan"/>
+            <input type="submit" value="Simpan" name="simpan">
         </p>
 
         </fieldset>
