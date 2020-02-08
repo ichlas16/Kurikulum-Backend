@@ -7,19 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daftar Data Barang</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="animate.css">
 </head>
 <body>
     <header>
-        <h3>Data Barang Dalam Database</h3>
+        <center><h3 class="animated bounce">Data Barang Dalam Database</h3></center>
     </header>
-
-    <nav>
-        <a href="form-daftar.php">[+] Tambah Baru</a>
-    </nav>
 
     <br/>
 
-    <table borde='1'>
+    <center><table borde='1' cellspacing="0" class="animated bounce">
     <thread>
         <tr>
             <th>No</th>
@@ -27,6 +25,7 @@
             <th>Alamat Pengirim</th>
             <th>Nama Penerima</th>
             <th>Alamat Penerima</th>
+            <th>Opsi</th>
         </tr>
     </thread>
     <tbody>
@@ -36,27 +35,34 @@
         $eks = $db->prepare($query);
         $eks->execute();
 
-        while($barang = $eks->fetch(pdo::FETCH_BOTH)){
-            echo "<tr>";
+        while($barang = $eks->fetch(pdo::FETCH_BOTH)){ ?>
+            <tr>
 
-            echo "<td>".$barang['id']."</td>";
-            echo "<td>".$barang['pengirim']."</td>";
-            echo "<td>".$barang['alpengirim']."</td>";
-            echo "<td>".$barang['penerima']."</td>";
-            echo "<td>".$barang['alpenerima']."</td>";
+            <td><?php echo $barang['id'];?></td>
+            <td><?php echo $barang['pengirim'];?></td>
+            <td><?php echo $barang['alpengirim'];?></td>
+            <td><?php echo $barang['penerima'];?></td>
+            <td><?php echo $barang['alpenerima'];?></td>
 
-            echo "<td>";
-            echo "<a href='form-edit.php?id=".$barang['id']."'>Edit</a> | ";
-            echo " <a href='hapus.php?id=".$barang['id']."'>Hapus</a>";
-            echo "</td>";
+            <td>
+            <a href=form-edit.php?id=<?php echo $barang['id'];?>>Edit</a>
+            <a href=hapus.php?id=<?php echo $barang['id'];?>>Hapus</a>
+            </td>
+            
 
-            echo "</tr>";
-        }
-        ?>
+            </tr>
+        <?php } ?>
+        
 
     </tbody>
 
-    </table>
+    </table></center>
+            <br/>
+    <center><nav>
+        <a href="form-daftar.php">[+] Tambah Baru</a>
+    </nav></center>
+
+    <br/>
 
 </body>
 </html>
