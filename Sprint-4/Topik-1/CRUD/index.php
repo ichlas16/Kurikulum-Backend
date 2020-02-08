@@ -7,25 +7,29 @@
     <title>Aplikasi CRUD</title>
 </head>
 <body>
-    <h3>APLIKASI CRUD BARANG</h3>
-    <form method="POST" action="">
-    <label>Mau ngapain Hari inih?</label>
-    <br/>
-    <input type="submit" name="create" value="Input Data">
-    <input type="submit" name="read" value="Lihat Data">
-    <input type="submit" name="update" value="Ubah Data">
-    <input type="submit" name="delete" value="Hapus Data">
-    </form>
+    <header>
+    <h1>Aplikasi Organisir Data Barang</h1>
+    <h3>Silahkan pilih pilihan yang ada!</h3>
+    </header>
+
+    <h4>Opsi</h4>
+    <nav>
+        <?php if(isset($_GET['status'])): ?>
+        <p>
+            <?php
+                if($_GET['status'] == 'sukses'){
+                    echo "Penginputan barang berhasil!";
+                }else {
+                    echo "Penginputan gagal!";
+                }
+            ?>
+        </p>
+        <?php endif; ?>
+        <ul>
+            <li><a href="form-daftar.php">Input Data Barang</a></li>
+            <li><a href="list-barang.php">Lihat Data Barang</a></li>
+        </ul>
+        </nav>
+        
 </body>
 </html>
-<?php
-if(isset($_POST['create'])){
-    header('location: create.php');
-}if(isset($_POST['read'])){
-    header('location: read.php');
-}if(isset($_POST['update'])){
-    header('location: update.php');
-}if(isset($_POST['delete'])){
-    header('location: delete.php');
-}
-?>
