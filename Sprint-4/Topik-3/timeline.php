@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +20,8 @@
             <div class="card">
                 <div class="card-body text-center">
 
-                    <img class="img img-responsive rounded-circle mb-3" width="160" src="img/default.svg"
-                    <h3><?php echo $_SESSION["user"]["username"]?></h3>
+                    <img class="img img-responsive rounded-circle mb-3" width="160" src="img/default.svg" />
+                    <h3><?php echo $_SESSION["username"]?></h3>
 
                     <p><a href="logout.php">Log Out</a></p>
                 </div>

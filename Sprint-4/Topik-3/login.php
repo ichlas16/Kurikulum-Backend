@@ -1,33 +1,3 @@
-<?php
-
-require_once("config.php");
-
-if(isset($_POST['login'])){
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM login WHERE username='$username'";
-    $stmt = $db->prepare($sql);
-
-    $stmt->execute();
-
-    $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    // jika user terdaftar
-    if($user === null){
-        // verifikasi password
-        if(password_verify($password, $user[$password])){
-            // buar session
-            session_start();
-            $_SESSION['user'] = $user;
-            // login sukses, alihkan ke halaman timeline
-            header("Location: timeline.php");
-        }
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,9 +35,41 @@ if(isset($_POST['login'])){
             </div>
 
             <div class="col-md-6">
-                <?php echo $stmt." test"; ?>
+                
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<?php
+
+include "config.php";
+session_start();
+
+if(isset($_POST['login'])){
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+
+    $sql = "SELECT * FROM login WHERE username='$username'";
+    $stmt = $db->prepare($sql);
+
+    $stmt->execute();
+
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // jika user terdaftar
+    if($user['username'] === $username){
+        echo "bisa";
+        // verifikasi password
+        if($user['password'] === $password){
+            // login sukses, alihkan ke halaman timeline
+            header("Location: timeline.php");
+        }
+    }
+}
+?>
