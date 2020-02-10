@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aplikasi Pengiriman Barang</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-body text-center">
+
+                    <img class="img img-responsive rounded-circle mb-3" width="160" src="img/default.svg"
+                    <h3><?php echo $_SESSION["user"]["username"]?></h3>
+
+                    <p><a href="logout.php">Log Out</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+            <form action="" method="post" >
+                <div class="form-group">
+                    <texterea class="form-control" placeholder="Apa yang sedang anda kepoin?" />
+                </div>
+            </form>
+
+            <?php for($i=0; $i< 6; $i++){ ?>
+            <div class="card mb-3">
+                <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis varitatis nemi ad recusandae labore nihil iure qui eum consequatur, officiis facere quis sunt tempora impedit ullam reprehenderit facilis ex amet!
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
