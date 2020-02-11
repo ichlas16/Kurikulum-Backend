@@ -86,7 +86,6 @@ if(isset($_SESSION["username"])) header("Location: timeline.php");
                         }
                     }elseif($user['username'] !== $username){
                         echo "<span>Harap periksa kembali username anda</span>";
-                        echo '<p>Username ini belum terdaftar, ingin mendaftar? <a href="register.php">Daftar di sini</a></p>';
                         echo '<img class="img img-responsive" src="img/incorrect.svg" />';
                     }else{
                         echo "Mau lu apa si?";
