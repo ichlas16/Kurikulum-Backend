@@ -1,4 +1,7 @@
 <?php
+session_start();
+if(isset($_SESSION["username"])) header("Location: timeline.php");
+
 require_once("config.php");
 
 if(isset($_POST['register'])){
@@ -39,6 +42,7 @@ if(isset($_POST['register'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register User Baru</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body class="bg-light">
     
@@ -66,8 +70,8 @@ if(isset($_POST['register'])){
             </form>
 
             </div>
-        <div class="col-md-6">
-            <img class="img img-responsive" src="img/connect.png" />
+        <div class="col-md-6, animated bounce">
+            <img class="img img-responsive" src="img/sign-up.svg" />
         </div>
 
     </div>

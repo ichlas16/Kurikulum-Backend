@@ -1,10 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION["username"])) header("Location: timeline.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ketampanan itu yang Utama</title>
+    <title>Halaman Login</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <style>
@@ -51,7 +56,7 @@
 
                 include "config.php";
                 session_start();
-
+                
                 if(isset($_POST['login'])){
 
                     $username = $_POST['username'];
@@ -75,18 +80,21 @@
                             header("Location: timeline.php");
                         }elseif($user['password'] !== $password){
                             echo "<span>Harap periksa kembali password anda</span>";
+                            echo '<img class="img img-responsive" src="img/incorrect.svg" />';
                         }else{
                             echo "Mau lu apa si?";
                         }
                     }elseif($user['username'] !== $username){
                         echo "<span>Harap periksa kembali username anda</span>";
                         echo '<p>Username ini belum terdaftar, ingin mendaftar? <a href="register.php">Daftar di sini</a></p>';
+                        echo '<img class="img img-responsive" src="img/incorrect.svg" />';
                     }else{
                         echo "Mau lu apa si?";
                     }
+                }if(!isset($_POST['login'])){
+                    echo '<img class="img img-responsive" src="img/login.svg" />';
                 }
                 ?>
-                <img class="img img-responsive" src="img/connect.png" />
             </div></center>
         </div>
     </div>
