@@ -33,7 +33,7 @@ require_once("auth.php");
 
             <form action="" method="post" >
                 <div class="form-group">
-                    <texterea class="form-control" placeholder="Apa yang sedang anda kepoin?" />
+                    <texterea class="form-control">Apa yang sedang anda kepoin?</texterea>
                 </div>
             </form>
 
