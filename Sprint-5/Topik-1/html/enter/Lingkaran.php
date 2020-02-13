@@ -7,21 +7,21 @@
 
 class Lingkaran{
 
-    protected  $diameter = 18,
-                $pi = 3.14;
+    protected  $pi = 3.14;
 
-    public function __construct()
+    public function hitung($jari)
     {
-        $jari = $this->diameter / 2;
-        $luasl = ($this->pi * $jari)**2;
+
+        $luasl = $this->pi * ($jari**2);
         $kelilingl = 2 * ($this->pi + $jari);
         echo "<br/>";
-        echo "Lingkaran";
+        echo "<h4>Lingkaran dengan jari-jari = $jari</h4>";
         echo "<br/>";
-        echo "Luas = ".$luasl;
+        echo "Luas = ".$luasl." m";
         echo "<br/>";
-        echo "Keliling = ".$kelilingl;
+        echo "Keliling = ".$kelilingl." m";
         echo "<br/>";
+
     }
 }
 
