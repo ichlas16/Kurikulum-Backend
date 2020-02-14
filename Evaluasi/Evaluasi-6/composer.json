@@ -1,0 +1,16 @@
+{
+    "name": "machray/evaluasi-6",
+    "description": "Makan Bang?",
+    "authors": [
+        {
+            "name": "ichlas16",
+            "email": "ichlaskeren@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bangundatar\\": "Controls/"
+        }
+    }
+}
